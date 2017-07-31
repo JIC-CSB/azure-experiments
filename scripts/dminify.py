@@ -52,7 +52,8 @@ def minify(input_file, output_file, n=4000):
 @click.command()
 @dataset_path_option
 @click.argument('new_dataset_path')
-def dminify(dataset_path, new_dataset_path):
+@click.option('--n', default=4000)
+def dminify(dataset_path, new_dataset_path, n):
 
     parent_dataset = dtoolcore.DataSet.from_path(dataset_path)
 
@@ -82,7 +83,7 @@ def dminify(dataset_path, new_dataset_path):
             input_file_path = parent_dataset.abspath_from_identifier(
                 identifier
             )
-            minify(input_file_path, output_file_path)
+            minify(input_file_path, output_file_path, n)
 
     output_dataset = dtoolcore.DataSet(dataset_name, 'data')
     output_dataset.persist_to_path(new_dataset_path)
