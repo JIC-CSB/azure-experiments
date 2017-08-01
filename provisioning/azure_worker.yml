@@ -10,4 +10,6 @@
     - docker
     - azure-docker-group
     - pip
-    - azure-worker
+    - build_tools
+    - python-build-headers
+    - azure-python

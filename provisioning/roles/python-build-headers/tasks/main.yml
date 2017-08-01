@@ -1,0 +1,5 @@
+---
+
+- name: Install build headers to build python packages
+  yum:
+    name: python-devel,openssl-devel,libffi-devel

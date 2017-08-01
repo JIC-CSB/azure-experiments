@@ -1,0 +1,13 @@
+---
+
+- name: install gcc
+  yum: name=gcc
+       state=present
+
+- name: install man-pages
+  yum: name=man-pages
+       state=present
+
+- name: install git
+  yum: name=git
+       state=present
