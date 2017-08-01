@@ -1,0 +1,6 @@
+---
+# This playbook install pip.
+
+- name: install pip
+  yum: name=python-pip
+       state=present

@@ -1,0 +1,6 @@
+---
+
+- name: Fix docker group setup for '{{ user }}'
+  user: name='{{ user }}'
+        groups=docker
+        append=yes

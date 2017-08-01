@@ -1,0 +1,13 @@
+---
+
+- name: configure azure worker
+  hosts: azure-workers
+  vars_files:
+    - vars.yml
+
+  roles:
+    - epel
+    - docker
+    - azure-docker-group
+    - pip
+    - azure-worker

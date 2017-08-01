@@ -1,0 +1,6 @@
+---
+
+- name: Install azure python packages and CLI
+  pip:
+    name: azure azure-cli
+    
