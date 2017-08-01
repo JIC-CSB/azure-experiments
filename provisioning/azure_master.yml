@@ -1,0 +1,12 @@
+---
+
+- name: configure azure masters
+  hosts: azure-masters
+  vars_files:
+    - vars.yml
+
+  roles:
+    - epel
+    - redis
+    - docker
+    - azure-docker-group

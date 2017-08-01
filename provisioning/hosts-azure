@@ -1,3 +1,6 @@
 [azure-workers]
 51.141.30.89 ansible_become=true
 
+[azure-masters]
+51.141.38.66 ansible_become=true
+
