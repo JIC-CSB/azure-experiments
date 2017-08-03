@@ -8,5 +8,6 @@
   roles:
     - epel
     - redis
+    - fluentd
     - docker
     - azure-docker-group
