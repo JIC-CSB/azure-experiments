@@ -1,0 +1,15 @@
+---
+
+- name: Clone dbluesea from git
+  git:
+    repo: https://github.com/JIC-CSB/dbluesea.git
+    dest: /home/hartleym/dbluesea
+
+- name: Copy and template account config
+  template: src=config.py.j2
+            dest=/home/hartleym/dbluesea/dbluesea/config.py
+
+- name: Install dbluesea
+  command: python setup.py develop
+  args:
+    chdir: /home/hartleym/dbluesea
