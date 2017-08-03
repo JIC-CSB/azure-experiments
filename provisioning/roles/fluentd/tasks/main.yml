@@ -1,0 +1,6 @@
+---
+
+- name: Install fluentd
+  shell: curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh
+  args:
+    creates: /etc/yum.repos.d/td.repo
